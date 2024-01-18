@@ -1,0 +1,28 @@
+{% include 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload files form hear</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" class="btn btn-danger" value="Upload">
+    </form>
+    <h1>-----------------------</h1>
+    <h2>{{ product.name }}</h2>
+    <p>Description: {{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+    {% for x in img %}
+    <img src="{{ x.image.url }}" alt="{{ x.name }}" width="300" height="300">
+    {% endfor %}
+</body>
+</html>
+
+
+
+

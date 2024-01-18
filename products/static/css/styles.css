@@ -1,0 +1,82 @@
+/* Reset default margin and padding */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+} */
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    max-width: 40vw;
+    max-height: 100%;
+}
+
+.product-info {
+    flex-grow: 1;
+    padding: 0 20px;
+    max-height: 100%;
+}
+.product-info-header{
+    border-bottom: 1px solid #CCCC;
+    padding-bottom: 10px;
+}
+
+/* a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333434;
+    background-color: #444545
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #333;
+    color: #fff;
+} */
+
+.center_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-custom {
+    color: #0e7a09; /* Specify your desired color value */
+}
+.custom-text {
+    color: #fdfdfd; /* Specify your desired color value */
+}
+.blur-border{
+  border:none;
+  box-shadow: 0 0 10px rgb(0,0,0,0.3);
+  padding:20px;
+}
+#zzz{
+    width:60%;
+    height: 100px;
+    background-color:green;
+}

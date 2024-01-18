@@ -1,0 +1,30 @@
+{% include 'main.html' %}
+
+  {% block menu %}
+
+          <div class="container">
+            <div class="row row-cols-3">
+                
+              {% for x in img %}
+              <!-- <h1>Productid {{x.id}}</h1> -->
+              <div class="col ">
+                 <!-- <h1>hello</h1> -->
+                <div class="card blur-border" style="width: 18rem;">
+                  <img src="{{ x.image.url }}" class="card-img-top" alt="..." style="width: 15rem;">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  <a href="{% url 'products:detail' x.id %}" > <button>Show</button> </a>
+                </div>
+              </div>
+
+              {% endfor %}
+
+            </div>
+          </div> 
+    {% endblock %}
+      
+
+      
+
+ 

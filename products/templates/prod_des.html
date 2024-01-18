@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% include 'main.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Product Detail</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- <header>
+        <h1>{{ product.name }}</h1>
+    </header> -->
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="{{ product.image.url }}">
+        </div>
+        <div class="product-info" style="margin-top: 0;">
+            <h2 class="product-info-header">{{ product.name }}</h2>
+            <p>Price: ${{ product.price }}</p>
+            <div>{{ product.description | safe }}</div>
+            <!-- Add more product details as needed -->
+        </div>
+    </div>
+    <!-- <a href="">Back to Product List</a> -->
+</body>
+</html>

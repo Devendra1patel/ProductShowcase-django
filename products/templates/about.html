@@ -1,0 +1,41 @@
+{% include 'main.html' %}
+
+{% block menu %}
+
+
+    <div class="" style="margin:30px 15px;   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),  -5px -5px 5px rgba(0, 0, 0, 0.5);border-radius: 10px;" >
+
+
+        <div class="" style="width:80vw;margin:auto;">
+            {{ about.about_description | safe }}
+        </div>
+
+      <div style="width: 800px; height: 5 00px; margin:auto;" id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                     <div class="carousel-inner">
+
+                        {% for ele in images %}
+
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                <img src='{{ ele.image.url }}' width="700" height="400" class="d-block w-100" alt="..." style="border-radius: 10px;">
+                            </div>
+                        
+                        {% endfor %}
+                    
+                    </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+       </div>
+       
+       
+    
+    </div>
+
+
+
+{% endblock %}
